@@ -19,7 +19,7 @@ pipeline {
         }
          stage('Deployment'){
              steps{
-                 sshagent(['c0dc0dfc-c5d7-4a73-8528-ae04bba4dc48']) {
+             sshagent(['118f7682-084b-4472-94cf-9e12f013dddb']) {
                    sh 'scp -o StrictHostKeyChecking=no target/maven-web-app.war azadmin@10.0.0.4:/home/azadmin/apache-tomcat-9.0.105/webapps/'
 
         }
