@@ -11,7 +11,7 @@ pipeline {
               git credentialsId: 'maven-web-app', url: 'https://github.com/yeswanthreddy778/maven-web-app.git'
             }
         }
-    }
+    
         stage('Build') {
             steps {
                sh 'mvn clean package'
@@ -26,4 +26,5 @@ scp -o StrictHostKeyChecking=no target/myapp.war azadmin@9.0.105:/home/azadmin/a
         }
     }
 }
+}  
 }    
