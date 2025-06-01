@@ -11,10 +11,16 @@ pipeline {
               git credentialsId: 'maven-web-app', url: 'https://github.com/yeswanthreddy778/maven-web-app.git'
             }
         }
+    }
         stage('Build') {
             steps {
                sh 'mvn clean package'
             }
         }
+         stage('Deployment'){
+             steps{
+                 sshagent(['c0dc0dfc-c5d7-4a73-8528-ae04bba4dc48']) {
+        }
     }
 }
+}    
